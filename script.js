@@ -28,7 +28,7 @@ let ballRadius = 7,
   dx = 2,
   dy = -2;
 */
-let ballRadius = 5,
+let ballRadius = 9,
   ballX = canvas.width / 2,
   ballY = canvas.height - 30,
   dx = 2,
@@ -40,7 +40,7 @@ let rightPressed = false,
 const brickRowCount = 4; // 총 4행의 벽돌
 const brickColumnCount = 5; // 총 5열의 벽돌
 const brickWidth = 75;
-const brickHeight = 15;
+const brickHeight = 25;
 const brickPadding = 10;
 const brickOffsetTop = 30;
 const brickOffsetLeft = 35;
