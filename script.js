@@ -157,7 +157,7 @@ function drawBricks() {
     for (let r = 0; r < brickRowCount; r++) {
       if (bricks[c][r].status >= 1) {
         const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-        const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+        const brickY = r * (brickHeight + brickPadding + 8) + brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
         /*ctx.beginPath();
@@ -201,9 +201,7 @@ function collisionDetection() {
           ballY < b.y + brickHeight
         ) {
           if (b.status === 2) {
-            console.log(b.damaged);
             b.damaged = true;
-            console.log(b.damaged);
           }
           dy = -dy;
           b.status -= 1; // 벽돌 제거
