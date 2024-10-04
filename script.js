@@ -18,7 +18,7 @@ const damagedbrickImage1 = new Image();
 damagedbrickImage1.src = "Breakout Tile Set Free/PNG/08-Breakout-Tiles.png";
 
 // 게임 객체 초기화
-let paddleHeight = 10,
+let paddleHeight = 14,
   paddleWidth = 75,
   paddleX = (canvas.width - paddleWidth) / 2;
 /*
@@ -156,8 +156,8 @@ function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
       if (bricks[c][r].status >= 1) {
-        const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-        const brickY = r * (brickHeight + brickPadding + 8) + brickOffsetTop;
+        const brickX = c * (brickWidth + brickPadding - 4) + brickOffsetLeft;
+        const brickY = r * (brickHeight + brickPadding - 4) + brickOffsetTop;
         bricks[c][r].x = brickX;
         bricks[c][r].y = brickY;
         /*ctx.beginPath();
